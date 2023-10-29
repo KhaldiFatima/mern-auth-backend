@@ -18,8 +18,8 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(
   cors({
-    // origin: ['http://localhost:3000', 'https:app.vercel.com'],
-    origin: true,
+    origin: ['http://localhost:3000', 'https://tg-trade-branch.netlify.app'],
+    // origin: true,
     credentials: true,
   })
 );
