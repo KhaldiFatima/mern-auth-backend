@@ -5,60 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        direction: ltr;
+        color: #333;
+      }
       body {
-        background-color: #0a1930;
+        background-color: #fff;
         padding: 30px;
         font-family: Arial, Helvetica, sans-serif;
       }
       .container {
         background-color: #eee;
-        padding: 10px;
+        padding: 75px;
         border-radius: 3px;
+        background: #030b6b;
       }
-      .color-primary {
-        color: #007bff;
+      .box {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
       }
-      .color-danger {
+
+      h1 {
+        font-family: Pacifico, cursive;
+        color: white;
+        margin-inline-end: 1rem;
+      }
+      .logo {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .box-body {
+        padding: 1.6rem;
+      }
+      h2 {
+        margin: 0;
+      }
+      .var {
         color: orangered;
       }
-      .color-success {
-        color: #28a745;
-      }
-      .color-white {
-        color: #fff;
-      }
-      .color-blue {
-        color: #0a1930;
-      }
-      a {
-        font-size: 1.4rem;
-        text-decoration: none;
+      .desc {
+        padding-block: 1rem;
       }
       .btn {
-        font-size: 1.4rem;
-        font-weight: 400;
-        padding: 6px 8px;
-        margin: 0 5px 0 0;
-        border: 1px solid transparent;
-        border-radius: 3px;
+        display: block;
+        margin: 1rem auto;
+        padding: 1rem 2rem;
+        /* border: 1px solid transparent; */
+        border-radius: 6px;
         cursor: pointer;
-      }
-      .btn-primary {
-        color: #fff;
-        background: #007bff;
-      }
-      .btn-secondary {
-        color: #fff;
-        border: 1px solid #fff;
-        background: transparent;
-      }
-      .btn-danger {
-        color: #fff;
-        background: orangered;
-      }
-      .btn-success {
-        color: #fff;
-        background: #28a745;
+        text-decoration: none;
+        color: white;
+        background: #030b6b;
+        width: fit-content;
       }
       .flex-center {
         display: flex;
@@ -67,27 +68,71 @@
       }
       .logo {
         padding: 5px;
-        background-color: #1f93ff;
+        background-color: #030b6b;
       }
       .my {
         margin: 2rem 0;
+      }
+
+      .line {
+        gap: 20px;
+        font-family: Pacifico, cursive;
+        border-top: 1px solid orangered;
+        width: 50%;
+        padding-top: 1rem;
+      }
+      .footer {
+        text-align: end;
+      }
+      .p {
+        margin: 0;
+      }
+      .tg {
+        color: #030b6b;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="logo flex-center">
-        <h2 class="color-white">TG Trade</h2>
-      </div>
-      <h2>Hello <span class="color-danger">{{name}}</span></h2>
-      <p>Please use the url below to verify your account</p>
-      <p>This link is valid for 1hr</p>
+      <div class="box">
+        <div class="logo flex-center">
+          <h1 class="color-white">TG Trade</h1>
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            role="img"
+            viewBox="0 0 24 24"
+            color="orangered"
+            height="35"
+            width="35"
+            xmlns="http://www.w3.org/2000/svg"
+            style="color: orangered"
+          >
+            <title></title>
+            <path
+              d="M23.235 6.825v11.997a.924.924 0 0 1-.419.725l-.393.235c-1.961 1.135-3.687 2.134-5.431 3.14V9.948L5.759 3.454C7.703 2.338 9.64 1.211 11.586.1a.927.927 0 0 1 .837 0l10.81 6.243v.482zm-8.741 4.562A9631.706 9631.706 0 0 0 6.8 6.943a.94.94 0 0 0-.837 0c-1.733 1.001-3.467 2-5.199 3.004l8.113 4.684V24c1.732-.999 3.46-2.006 5.197-2.995a.927.927 0 0 0 .419-.724zM.765 19.317l5.613 3.241V16.07Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="box-body">
+          <h2>Hello <span class="var">{{name}}</span></h2>
+          <div class="desc">
+            <p>Please use the url below to verify your account</p>
+            <p>This link is valid for <span class="var">1hr</span></p>
+          </div>
 
-      <a href="{{link}}" class="btn btn-success">Verify Account</a>
+          <a href="{{link}}" class="btn">Verify Account</a>
 
-      <div class="my">
-        <p>Regards...</p>
-        <p><b class="color-danger">TG trade</b> Team</p>
+          <div class="my">
+            <div class="flex-center">
+              <div class="line">
+                <p class="p">Regards...</p>
+                <p class="footer p"><b class="tg">TG trade</b> Team</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 
 const userRouter = require('./routes/user');
+// const settingsRouter = require('./routes/settings');
 
 const error = require('./middleware/errorMiddleware');
 
@@ -17,12 +18,14 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: ['http://localhost:3000/', 'https:app.vercel.com'],
+    // origin: ['http://localhost:3000', 'https:app.vercel.com'],
+    origin: true,
     credentials: true,
   })
 );
 
 app.use('/api/v1/users', userRouter);
+// app.use('/api/v1/settings', settingsRouter);
 
 app.get('/', (req, res) => {
   res.send('Home Page');

@@ -163,6 +163,7 @@ const login = asyncHandler(async (req, res) => {
       phoneNumber,
       email,
       avatar,
+      role,
       isVerified,
     } = user;
     res.status(200).json({
@@ -173,6 +174,7 @@ const login = asyncHandler(async (req, res) => {
       phoneNumber,
       email,
       avatar,
+      role,
       isVerified,
       token,
     });
@@ -287,6 +289,7 @@ const getUser = asyncHandler(async (req, res) => {
       phoneNumber,
       email,
       avatar,
+      role,
       isVerified,
     } = user;
     res.status(201).json({
@@ -297,6 +300,7 @@ const getUser = asyncHandler(async (req, res) => {
       phoneNumber,
       email,
       avatar,
+      role,
       isVerified,
     });
   } else {

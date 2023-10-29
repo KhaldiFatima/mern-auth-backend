@@ -37,7 +37,8 @@ const userSchema = mongoose.Schema(
     avatar: {
       type: String,
       required: [true, 'Please add a photo'],
-      default: 'https://i.ibb.co/4pDNDk1/avatar.png',
+      default:
+        'https://github.com/KhaldiFatima/mern-auth-frontend/blob/main/src/assets/New%20folder/p.png?raw=true',
     },
     bio: {
       type: String,
