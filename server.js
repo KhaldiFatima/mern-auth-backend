@@ -20,8 +20,8 @@ app.use(
   cors({
     // origin: ['http://localhost:3000', 'https://tg-trade-branch.netlify.app'],
     // origin: true,
-    origin: '*',
-
+    // origin: '*',
+    origin: process.env.CLIENT_URL || 'http://localhost:3000',
     credentials: true,
   })
 );
