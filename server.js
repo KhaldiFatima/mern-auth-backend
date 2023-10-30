@@ -23,10 +23,10 @@ app.use(
     // origin: true,
     // origin: '*',
     // origin: process.env.CLIENT_URL || 'http://localhost:3000',
-    credentials: true,
+    // credentials: true,
   })
 );
-app.options('*', cors())
+// app.options('*', cors())
 
 app.use('/api/v1/users', userRouter);
 // app.use('/api/v1/settings', settingsRouter);
