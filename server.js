@@ -19,9 +19,9 @@ app.use(bodyParser.json());
 app.use(
   cors({
        // origin: ["http://localhost:3000", "https://tg-trade-branch.netlify.app"],
-Access-Control-Allow-Origin: '*',
+// Access-Control-Allow-Origin: '*',
     // origin: true,
-    // origin: '*',
+    origin: 'https://tg-trade-branch.netlify.app',
     // origin: process.env.CLIENT_URL || 'http://localhost:3000',
     credentials: true,
   })
